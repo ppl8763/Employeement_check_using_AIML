@@ -11,7 +11,7 @@ st.markdown("This dashboard provides insights into the unemployment data across 
 # --- Load and Clean Data ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv("C:/Users/priya/PycharmProjects/gestureVolume/unemployment_data.csv")
+    df = pd.read_csv("unemployment_data.csv")
  # replace with your correct path
     df.columns = [col.strip() for col in df.columns]  # remove whitespace from column names
     df['Date'] = pd.to_datetime(df['Date'], dayfirst=True, errors='coerce')
